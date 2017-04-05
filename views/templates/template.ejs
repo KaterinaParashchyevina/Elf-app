@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Christmas Elfs</title>
+		<link rel="stylesheet" href="style/style.css">
+		<link href="https://fonts.googleapis.com/css?family=Aref+Ruqaa" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Coming+Soon" rel="stylesheet">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+		<script src="/socket.io/socket.io.js"></script>
+		<script src="js/comment.js"></script>
+	</head>
+	<body>
+		<% include ../partials/header %>
+
+		<% if(page == "main"){ %>
+			<% include ../pages/main.ejs %>
+		<% } %>
+
+		<% if(page == "product"){ %>
+			<% include ../pages/product.ejs %>
+		<% } %>
+
+		<% if(page == "guest"){ %>
+			<% include ../pages/guest.ejs %>
+		<% } %>
+
+		<% if(page == "login"){ %>
+			<% include ../pages/login.ejs %>
+		<% } %>
+
+		<% if(page == "signup"){ %>
+			<% include ../pages/signup.ejs %>
+		<% } %>
+
+		<% if(page == "404"){ %>
+			<% include ../pages/404.ejs %>
+		<% } %>
+
+		<% if(page == "500"){ %>
+			<% include ../pages/500.ejs %>
+		<% } %>
+
+
+ 		<% include ../partials/footer %>
+ 		
+	
+
+	</body>
+</html>

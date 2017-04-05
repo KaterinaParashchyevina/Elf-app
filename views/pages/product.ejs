@@ -1,0 +1,58 @@
+<div class="reg logout">
+	<a href="/logout">Log Out</a>		
+</div>
+
+<div class="wrap">
+	<div class="pageWrap">
+		
+		<div class="container">
+				<img src="<%=img%>" alt="" data-item='<%=id%>'>
+				<h3><%=title%></h3>
+		</div>
+
+		<div class="container">
+			<p><b><%=description%></b></p>
+			
+	       <div class="ratingHolder">
+                <div class="userRatingHolder">
+                    <div class="userRating">
+                        <div class="votingHolder">
+                            <div data-score="5" class="vote onestar"></div>
+                            <div data-score="4" class="vote twostar"></div>
+                            <div data-score="3" class="vote threestar"></div>
+                            <div data-score="2" class="vote fourstar"></div>
+                            <div data-score="1" class="vote fivestar"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="passiveRatingHolder">
+                     <div class="ratingBg"></div>
+                     <div style="width: <%=width%>;" class="ratingMask"></div>
+                </div>
+            </div>
+
+			<input name="my_input" value="3" id="rating_star" type="hidden">
+			<form action="/product" id="comment_form">
+				<textarea name="" id=""  rows="5" placeholder="Enter your review...."></textarea>
+				<button>Send</button>
+            </form>
+
+						
+			<div class="comments_list">
+				<ul>
+
+					<%comment.forEach(function(item, comment){%>
+					
+					<li>
+						<p>Rate: <%=item.rate%></p>
+						<p><%=item.text%></p>
+					</li>
+
+					<%})%>
+
+				</ul>
+			</div>
+
+		</div>
+	</div>
+</div>
